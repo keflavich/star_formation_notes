@@ -320,8 +320,14 @@ where $E_{\rm SN} = 10^{51}$ erg is the constant energy per SN, and $m_{\rm min}
 \end{equation}
 A more detailed calculation from starburst99 agrees very well with this crude estimate. Note that this, plus the Milky Way's SFR of $\sim 1$ $\msun$ yr$^{-1}$, is the basis of the oft-quoted result that we expect $\sim 1$ supernova per century in the Milky Way.
 
+% E = 1e51 erg
+% M = 1e33 g
+% v = 1e9 cm/s = 1e4 km/s
+% p = E/v/m = 1e9 cm/s = 1e4 km/s
+% astropy version: 2*(1e51*u.erg / (1e9*u.cm/u.s)/u.M_sun).to(u.km/u.s)
+% <Quantity 10058.28843174 km / s>
 The momentum yield from SNe can be computed in the same way. This is slightly more uncertain, because it is easier to measure the SN energy than its momentum -- the latter requires the ability to measure the velocity or mass of the ejecta before they are mixed with significant amounts of ISM. However, roughly speaking the ejection velocity is $v_{\rm ej} \approx 10^9$ cm s$^{-1}$, which means that the momentum is $p_{\rm SN} = 2 E_{\rm SN}/v_{\rm ej}$. Adopting this value, we have
 \begin{equation}
-\left\langle \frac{p_{\rm SN}}{M}\right\rangle = \frac{2}{v_{\rm ej}} \left\langle \frac{E_{\rm SN}}{M}\right\rangle = 55 v_{\rm ej,9}^{-1} \mbox{ km s}^{-1}.
+\left\langle \frac{p_{\rm SN}}{M}\right\rangle = \frac{2}{v_{\rm ej}} \left\langle \frac{E_{\rm SN}}{M}\right\rangle = 10^4 v_{\rm ej,9}^{-1} \mbox{ km s}^{-1}.
 \end{equation}
-Physically, this means that every $\msun$ of matter than goes into stars provides enough momentum to raise another $\msun$ of matter to a speed of 55 km s$^{-1}$. This is not very much compared to other feedbacks, but of course supernovae, like stellar winds, may have an energy-conserving phase where their momentum deposition grows. We will discuss the question of supernova momentum deposition more in Chapter \ref{ch:sflaw_th} in the context of models for regulation of the star formation rate.
+Physically, this means that every $\msun$ of matter than goes into stars provides enough momentum to raise another $\msun$ of matter to a speed of 10$^4$ km s$^{-1}$. This is greater than other feedbacks already, which is why SNe have commonly been assumed to be the dominant source of feedback on galactic scales.  Additionally, supernovae, like stellar winds, may have an energy-conserving phase where their momentum deposition grows. We will discuss the question of supernova momentum deposition more in Chapter \ref{ch:sflaw_th} in the context of models for regulation of the star formation rate.
